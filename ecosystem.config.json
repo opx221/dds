@@ -1,0 +1,35 @@
+{
+  "apps": [
+    {
+      "name": "public-hs",
+      "script": "tor -f torrc/public"
+    },
+    {
+      "name": "frontend-hs",
+      "script": "tor -f torrc/frontend"
+    },
+    {
+      "name": "monero-wallet",
+      "script": "bash .bin/wallet/start-prod"
+    },
+    {
+      "name": "public",
+      "script": "serve public"
+    },
+    {
+      "name": "frontend",
+      "script": "yarn frontend",
+      "log_date_format": "YYYY-MM-DDTHH:mm:ss"
+    },
+    {
+      "name": "deposit-listener",
+      "script": "yarn deposit-listener",
+      "log_date_format": "YYYY-MM-DDTHH:mm:ss"
+    },
+    {
+      "name": "bot",
+      "script": "yarn bot",
+      "log_date_format": "YYYY-MM-DDTHH:mm:ss"
+    }
+  ]
+}

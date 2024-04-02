@@ -1,0 +1,6 @@
+node \
+  --no-warnings=ExperimentalWarning \
+  --es-module-specifier-resolution=node \
+  --no-experimental-fetch \
+  --experimental-vm-modules \
+  $@

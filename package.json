@@ -1,0 +1,47 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@jest/globals": "^29.7.0",
+    "@koa/router": "^12.0.1",
+    "coingecko-api": "^1.0.10",
+    "detect-content-type": "^1.2.0",
+    "expiry-map": "^2.0.0",
+    "get-stream": "^8.0.1",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.14.2",
+    "koa-body": "^6.0.1",
+    "koa-compose": "^4.1.0",
+    "koa-jwt": "^4.0.4",
+    "koa-session": "^6.4.0",
+    "monero-ts": "^0.9.6",
+    "nodemon": "^3.0.1",
+    "object.groupby": "^1.0.1",
+    "otplib": "^12.0.1",
+    "pg": "^8.11.3",
+    "pm2": "^5.3.0",
+    "qrcode": "^1.5.3",
+    "serve": "^14.2.1",
+    "sleep-promise": "^9.1.0",
+    "telegraf": "^4.15.3"
+  },
+  "scripts": {
+    "test": ".bin/mynode ./node_modules/.bin/jest",
+    "bot": ".bin/mynode src/bot",
+    "bot-dev": "NODE_ENV=development .bin/mynode src/bot",
+    "deposit-listener": ".bin/mynode src/depositListener",
+    "frontend": ".bin/mynode src/frontend",
+    "frontend-dev": "CAPTCHA_POOL_BYPASS=1 TOTP_VALIDATION_BYPASS=1 NODE_ENV=development .bin/mynodemon src/frontend"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jest": "^27.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0 <19.0.0"
+  },
+  "license": "MIT"
+}

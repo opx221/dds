@@ -1,0 +1,7 @@
+source .env
+
+pg_dump --data-only > ./tmpdb
+.bin/database/drop-all-tables
+.bin/database/init-schemas
+psql < ./tmpdb
+#rm ./tmpdb

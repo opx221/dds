@@ -1,0 +1,6 @@
+RunAsDaemon 0
+SocksPort 0
+DataDirectory ~/.tor-frontend-hs
+
+HiddenServiceDir hidden_services/frontend
+HiddenServicePort 80 8080

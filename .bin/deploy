@@ -1,0 +1,2 @@
+.bin/upload
+.bin/ssh/core-user "yarn && pm2 restart frontend bot deposit-listener"

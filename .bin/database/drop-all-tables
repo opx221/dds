@@ -1,0 +1,9 @@
+source .env
+
+psql -c "
+drop table photos;
+drop table drops;
+drop table drop_types;
+drop table users;
+drop table telegram_users;
+"

@@ -1,0 +1,23 @@
+import isDev from './utils/isDev';
+
+export const BOT_TOKEN = (
+  isDev
+    ? 'TOKEN 1'
+    : 'TOKEN 2'
+);
+export const PID_DERIVATION_SALT = (
+  Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex')
+);
+const JWT_SECRET = (
+  Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex')
+);
+const FIAT_SYMBOL = '€';
+const SPLIT_DEFAULT = 5;
+const SUPPORT_USERNAME = 'dds_support';
+
+export {
+  FIAT_SYMBOL,
+  JWT_SECRET,
+  SPLIT_DEFAULT,
+  SUPPORT_USERNAME,
+};

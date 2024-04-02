@@ -1,0 +1,8 @@
+monero-wallet-rpc \
+  --wallet-file ./monero-wallet/dds_dev \
+  --disable-rpc-login \
+  --rpc-bind-port 28082 \
+  --log-file /tmp/monero-wallet-rpc.log \
+  --password "" \
+  --daemon-address nodes.hashvault.pro:18081 \
+  --non-interactive

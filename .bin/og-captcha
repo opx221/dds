@@ -1,0 +1,38 @@
+#!/bin/bash
+
+rsign() {
+    echo $(( RANDOM % 2 * 2 - 1 ))
+}
+s0=$(rsign)
+s1=$(rsign)
+s2=$(rsign)
+s3=$(rsign)
+
+r0=$(((4 + RANDOM % 4) * s0))
+r1=$(((4 + RANDOM % 2) * s1))
+r2=$(((4 + RANDOM % 4) * s2))
+r3=$(((4 + RANDOM % 2) * s3))
+#r0=0
+#r1=0
+#r2=0
+#r3=0
+
+solution=$1
+convert \
+  -size 150x70 \
+  canvas:transparent \
+  -gravity center \
+  -pointsize 44 \
+  -fill white \
+  -kerning -5 \
+  -font Noto-Sans-Mono-Regular \
+  -annotate +0+0 "${solution^^}" \
+  -background transparent \
+  -swirl $r0 \
+  -wave $((r1))x40 \
+  -rotate +90 \
+  -swirl $r2 \
+  -wave $((r3))x40 \
+  -rotate -90 \
+  -crop 150x70+0+0 \
+  $2

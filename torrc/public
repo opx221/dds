@@ -1,0 +1,6 @@
+RunAsDaemon 0
+SocksPort 0
+DataDirectory ~/.tor-public-hs
+
+HiddenServiceDir hidden_services/public
+HiddenServicePort 80 3000

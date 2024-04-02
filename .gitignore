@@ -1,0 +1,12 @@
+node_modules
+docs
+.ssh
+.pgp
+res
+trash
+monero-wallet
+hidden_services
+
+src/const.js
+.env
+public/index.html

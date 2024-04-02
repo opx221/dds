@@ -1,0 +1,16 @@
+source .env
+dest=user@$core
+
+rsync \
+  -vrz \
+  --exclude node_modules \
+  --exclude docs \
+  --exclude .ssh \
+  --exclude .pgp \
+  --exclude .git \
+  --exclude trash \
+  --exclude monero-wallet \
+  --exclude README.md \
+  . \
+  -e "ssh -i .ssh/id_rsa" \
+  $dest:/home/user/

@@ -1,0 +1,2 @@
+source .env
+ssh root@$core -i .ssh/id_rsa $@

@@ -1,0 +1,13 @@
+#!/usr/bin/env .bin/mynode
+
+import createUsers from '../../src/backend/Users';
+import createDropTypes from '../../src/backend/DropTypes';
+import createDrops from '../../src/backend/Drops';
+import createPhotos from '../../src/backend/Photos';
+import createTelegramUsers from '../../src/backend/TelegramUsers';
+
+await createUsers(null, { doNotCreateAdmin: true });
+await createTelegramUsers();
+await createDropTypes();
+await createDrops();
+await createPhotos();

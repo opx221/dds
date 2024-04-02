@@ -1,0 +1,11 @@
+source .env
+
+username=$1
+unconfirmed_balance=$(echo "$2 * 1000000000000" | bc)
+confirmed_balance=$(echo "$3 * 1000000000000" | bc)
+
+psql -c "
+UPDATE telegram_users
+SET balance = ARRAY[$unconfirmed_balance, $confirmed_balance]
+WHERE username = '$username'
+"
